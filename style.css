@@ -34,14 +34,14 @@ section {
 .about-me-area {
   align-items: center;
 }
-@media only screen and (max-width: 344px) {
+@media only screen and (max-width: 480px) {
   .greeting-area,
   .about-me-area {
     display: flex;
     flex-direction: column;
   }
 }
-@media only screen and (min-width: 345px) {
+@media only screen and (min-width: 481px) {
   .greeting-area,
   .about-me-area {
     display: flex;
@@ -67,13 +67,13 @@ section {
   }
 }
 
-@media only screen and (max-width: 344px) {
+@media only screen and (max-width: 480px) {
   .greeting-area__img {
     display: none;
   }
 }
 
-@media only screen and (max-width: 344px) {
+@media only screen and (max-width: 481px) {
   .about-me-area {
     display: flex;
     flex-direction: column;
