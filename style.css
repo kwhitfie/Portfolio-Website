@@ -1,11 +1,18 @@
-header {
-  background-color: grey;
-  width: 100vw;
-  height: 45px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+@media only screen and (max-width: 480px) {
+  header {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) {
+  header {
+    background-color: grey;
+    width: 100vw;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 footer {
@@ -14,25 +21,36 @@ footer {
   height: 155px;
 }
 
+@media only screen and (max-width: 480px) {
+  main {
+    margin: 20px 20px 20px 20px;
+  }
+}
+@media only screen and (min-width: 481px) {
+  main {
+    margin: 55px 0px 0px 0px;
+  }
+}
 main {
-  margin: 55px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  display: flex;
   overflow: auto;
-  flex-direction: column;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
-  margin: 40px 0px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .greeting-area,
 .about-me-area {
   align-items: center;
+  flex-direction: column;
 }
 @media only screen and (max-width: 480px) {
   .greeting-area,
@@ -72,6 +90,11 @@ section {
     display: none;
   }
 }
+@media only screen and (min-width: 481px) {
+  .greeting-area {
+    margin-top: 80px;
+  }
+}
 
 @media only screen and (max-width: 481px) {
   .about-me-area {
@@ -85,4 +108,70 @@ section {
     margin-top: auto;
     order: 2;
   }
+}
+
+.technical-skills-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.technical-skills-area__text {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .technical-skills-area__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-flow: row;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .technical-skills-area__grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-flow: row;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.my-projects-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 480px) {
+  .my-projects-area__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-flow: row;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .my-projects-area__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+  }
+}
+.my-projects-area__project {
+  align-items: center;
+  padding: 40px;
+}
+@media only screen and (max-width: 480px) {
+  .my-projects-area__project {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .my-projects-area__project {
+    width: 40vw;
+  }
+}
+.my-projects-area__project--image {
+  display: flex;
+  width: 100%;
 }
