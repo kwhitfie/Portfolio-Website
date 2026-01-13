@@ -8,12 +8,18 @@ body {
   overflow: auto;
   margin: 0;
   font-family: "Work Sans", sans-serif;
-  background-color: colours.$powderBlush;
+  background-image: linear-gradient(
+    to right,
+    colours.$almondCream,
+    colours.$powderBlush,
+    colours.$darkerCoral
+  );
 }
 
 h2,
 h3,
-p {
+p,
+button {
   color: colours.$crimsonViolet;
 }
 
@@ -31,6 +37,9 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    //border-bottom: 4px double colours.$crimsonViolet;
+    box-shadow: colours.$crimsonViolet 0px 4px 16px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   }
 }
 
@@ -46,13 +55,27 @@ header {
   &--button {
     align-self: center;
     margin: 0px 10px 0px 10px;
+    font-size: 18px;
+  }
+  &--contact {
+    border-radius: 15px;
+    border: 1px solid colours.$darkCoral;
+    background-color: colours.$almondSilk;
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+
+    &:hover {
+      background-color: colours.$almondCream;
+    }
   }
 }
 .header_title {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0px 0px 0px 20px;
   text-align: center;
+  color: colours.$pastelYellow;
+  text-decoration: solid 3px colours.$pastelOrange;
 }
 
 button.header_nav--button {
@@ -63,6 +86,8 @@ footer {
   background-color: colours.$darkCoral;
   width: 100%;
   height: 155px;
+  box-shadow: colours.$crimsonViolet 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 main {
@@ -81,7 +106,15 @@ main {
 section {
   margin-top: 40px;
   margin-bottom: 10px;
-  background-color: colours.$almondCream;
+  //background-color: colours.$almondCream;
+  background-image: linear-gradient(
+    to left,
+    colours.$almondCream 0%,
+    colours.$cornsilk 100%
+  );
+
+  box-shadow: colours.$almondSilk 0px 0px 0px 2px inset,
+    colours.$pastelYellow 10px -10px 0px -3px, colours.$pastelOrange 10px -10px;
 }
 
 @mixin asymmetrical-grid {
@@ -200,8 +233,9 @@ section {
 
   &__project {
     align-items: center;
-
-    padding: 40px;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
 
     @media only screen and (max-width: ($mobile-width)) {
       width: 80vw;
@@ -214,10 +248,25 @@ section {
       display: flex;
       width: 100%;
     }
+
+    &--button {
+      border-radius: 25px;
+      border: 1px solid colours.$darkCoral;
+      background-color: colours.$almondSilk;
+
+      &:hover {
+        background-color: colours.$darkerCoral;
+      }
+    }
+
+    &:hover {
+      background-color: colours.$cornsilkier;
+    }
   }
 }
 .my-projects-area,
 .technical-skills-area {
   margin-left: 20px;
   margin-right: 20px;
+  border-radius: 25px;
 }
