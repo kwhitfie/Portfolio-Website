@@ -11,8 +11,8 @@ body {
   background-image: linear-gradient(
     to right,
     colours.$almondCream,
-    colours.$powderBlush,
-    colours.$darkerCoral
+    colours.$almondSilk,
+    colours.$powderBlush
   );
 }
 
@@ -74,7 +74,7 @@ header {
   font-weight: bold;
   margin: 0px 0px 0px 20px;
   text-align: center;
-  color: colours.$pastelYellow;
+  //color: colours.$pastelYellow;
   text-decoration: solid 3px colours.$pastelOrange;
 }
 
@@ -115,9 +115,6 @@ section {
     colours.$almondCream 0%,
     colours.$cornsilk 100%
   );
-
-  box-shadow: colours.$almondSilk 0px 0px 0px 2px inset,
-    colours.$pastelYellow 10px -10px 0px -3px, colours.$pastelOrange 10px -10px;
 }
 
 @mixin asymmetrical-grid {
@@ -145,10 +142,12 @@ section {
 
 .greeting-area,
 .about-me-area {
+  display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 
   @media only screen and (max-width: $mobile-width) {
     display: flex;
@@ -189,6 +188,18 @@ section {
   }
 }
 
+.greeting-area__img {
+  @media only screen and (max-width: 999px) {
+    flex: 50%;
+  }
+  @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+    flex: 20%;
+  }
+  @media only screen and (min-width: 1401px) {
+    flex: 10%;
+  }
+}
+
 @mixin grid($width) {
   display: grid;
   grid-template-columns: repeat($width, 1fr);
@@ -200,7 +211,9 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
+  &__title {
+    width: 100%;
+  }
   &__text {
     padding-bottom: 20px;
     padding-left: 20px;
@@ -212,7 +225,13 @@ section {
       @include grid(1);
     }
 
-    @media only screen and (min-width: ($mobile-width+1)) {
+    @media only screen and (min-width: ($mobile-width+1)) and (max-width: 700px) {
+      @include grid(5);
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @media only screen and (min-width: 701px) {
       @include grid(9);
       padding-left: 100px;
       padding-right: 100px;
@@ -244,7 +263,7 @@ section {
       width: 80vw;
     }
     @media only screen and (min-width: ($mobile-width+1)) {
-      width: 40vw;
+      width: 1fr;
     }
 
     &--image {
@@ -269,7 +288,32 @@ section {
 }
 .my-projects-area,
 .technical-skills-area {
+  box-shadow: colours.$almondSilk 0px 0px 0px 2px inset,
+    colours.$pastelYellow 10px -10px 0px -3px, colours.$pastelOrange 10px -10px;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 25px;
+}
+.my-projects-area {
+  margin-bottom: 50px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  align-items: center;
+
+  &__email {
+    font-style: italic;
+  }
+  &__contact-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    &--img {
+      max-width: 10%;
+      padding: 8px;
+    }
+  }
 }
