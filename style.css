@@ -164,6 +164,7 @@ section {
     order: 1;
   }
   .about-me-area__img {
+    height: 400px;
     margin-top: auto;
     order: 2;
   }
@@ -291,16 +292,16 @@ section {
 .footer {
   display: flex;
   flex-direction: row;
-  padding-left: 20px;
   align-items: center;
 }
 .footer__email {
   font-style: italic;
+  padding-left: 30px;
 }
 .footer__contact-buttons {
   display: flex;
   flex-direction: row-reverse;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 .footer__contact-buttons--img {
   max-width: 10%;

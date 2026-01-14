@@ -182,6 +182,7 @@ section {
     }
 
     &__img {
+      height: 400px;
       margin-top: auto;
       order: 2;
     }
@@ -301,16 +302,17 @@ section {
 .footer {
   display: flex;
   flex-direction: row;
-  padding-left: 20px;
+
   align-items: center;
 
   &__email {
     font-style: italic;
+    padding-left: 30px;
   }
   &__contact-buttons {
     display: flex;
     flex-direction: row-reverse;
-    padding-right: 20px;
+    padding-right: 30px;
     &--img {
       max-width: 10%;
       padding: 8px;
