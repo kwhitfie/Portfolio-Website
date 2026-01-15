@@ -10,16 +10,18 @@
     <header>
       <h3 class="header_title">Kayley Whitfield</h3>
       <div class="header_nav">
-        <button class="header_nav--button header_nav--contact">
-          Get in Touch
-        </button>
-        <p class="header_nav--button">Projects</p>
-        <p class="header_nav--button">About</p>
-        <p class="header_nav--button">Home</p>
+        <a href="#contact"
+          ><button class="header_nav--button header_nav--contact">
+            Get in Touch
+          </button></a
+        >
+        <a href="#projects" class="header_nav--button">Projects</a>
+        <a href="#about" class="header_nav--button">About</a>
+        <a href="#home" class="header_nav--button">Home</a>
       </div>
     </header>
     <main>
-      <section class="greeting-area">
+      <section class="greeting-area" id="home">
         <div class="greeting-area__text">
           <p class="greeting-area__text--title">Hey! I'm Kayley Whitfield</p>
           <h2 class="greeting-area__text--content">
@@ -32,7 +34,7 @@
           alt="placeholder"
         />
       </section>
-      <section class="about-me-area">
+      <section class="about-me-area" id="about">
         <img
           class="about-me-area__img"
           src=".\images\about-me-image.png"
@@ -131,7 +133,7 @@
           </div>
         </div>
       </section>
-      <section class="my-projects-area">
+      <section class="my-projects-area" id="projects">
         <h2 class="my-projects-area__title">My Projects</h2>
         <div class="my-projects-area__grid">
           <div class="my-projects-area__project">
@@ -188,24 +190,33 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <p class="footer__email">kayley.whitfield1@gmail.com</p>
       <div class="footer__contact-buttons">
-        <img
-          class="footer__contact-buttons--img"
-          src=".\images\linkedin.png"
-          alt="linkedIn"
-        />
-        <img
-          class="footer__contact-buttons--img"
-          src=".\images\github.png"
-          alt="GitHub"
-        />
-        <img
-          class="footer__contact-buttons--img"
-          src=".\images\itch.png"
-          alt="itch.io"
-        />
+        <a
+          href="https://www.linkedin.com/in/kayley-whitfield-80a215333/"
+          target="_blank"
+        >
+          <img
+            class="footer__contact-buttons--img"
+            src=".\images\linkedin.png"
+            alt="linkedIn"
+          />
+        </a>
+        <a href="https://github.com/kwhitfie" target="_blank">
+          <img
+            class="footer__contact-buttons--img"
+            src=".\images\github.png"
+            alt="GitHub"
+          />
+        </a>
+        <a href="https://kayleydoubleu.itch.io/" target="_blank">
+          <img
+            class="footer__contact-buttons--img"
+            src=".\images\itch.png"
+            alt="itch.io"
+          />
+        </a>
       </div>
     </footer>
   </body>
