@@ -34,7 +34,7 @@ a {
   }
 }
 
-.header_nav {
+.header__nav {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
@@ -43,23 +43,23 @@ a {
   margin-bottom: 0px;
   height: 100%;
 }
-.header_nav--button {
+.header__nav--button {
   align-self: center;
   margin: 0px 10px 0px 10px;
   font-size: 18px;
 }
-.header_nav--contact {
+.header__nav--contact {
   border-radius: 15px;
   border: 1px solid #e58087;
   background-color: #f6cdbc;
   font-size: 1rem;
   font-family: "Work Sans", sans-serif;
 }
-.header_nav--contact:hover {
+.header__nav--contact:hover {
   background-color: #fae1ca;
 }
 
-.header_title {
+.header__title {
   font-size: 20px;
   font-weight: bold;
   margin: 0px 0px 0px 20px;
@@ -67,7 +67,7 @@ a {
   text-decoration: solid 3px rgb(255, 207, 179);
 }
 
-button.header_nav--button {
+button.header__nav--button {
   height: 30px;
   width: 120px;
   font-size: 14px;
